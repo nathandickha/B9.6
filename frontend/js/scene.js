@@ -567,7 +567,7 @@ function updateSpaVoidDebug(scene, ground, poolGroup, spaGroup, holePts = null) 
   if (ENABLE_SPA_DEBUG_VOIDS) {
   // 2) Ground material spa clip region (magenta)
   const margins = getSpaChannelMargins(spaGroup, poolGroup);
-  const expanded = getExpandedSpaWorldAABB(spaGroup, margins, 0.02, SPA_GROUND_CLIP_MARGIN_REDUCTION);
+  const expanded = getExpandedSpaWorldAABB(spaGroup, margins, 0.1, SPA_GROUND_CLIP_MARGIN_REDUCTION);
   if (expanded) {
     const offsetX = (expanded.maxX + expanded.minX) * 0.5;
     const offsetY = (expanded.maxY + expanded.minY) * 0.5;
